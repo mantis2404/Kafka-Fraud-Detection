@@ -45,12 +45,17 @@ faker==24.9.0
 ```bash
 pip install -r requirements.txt
 ```
+Run the genrator.py
+
 ```bash
 python generator.py
 ```
+Run the detector.py
+
 ```bash
 python detector.py
 ```
+#### NOTE: RUN BOTH THESE SIMULTANEOUSLY
 --- 
 ### Sample Transaction JSON
 
