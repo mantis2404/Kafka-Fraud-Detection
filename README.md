@@ -35,8 +35,8 @@ A transaction is flagged as **fraudulent** if:
 
 ```mermaid
 flowchart LR
-    A[Transaction Generator<br>(generator.py)] --> B((TRANSACTIONS_TOPIC))
-    B --> C[Fraud Detector<br>(detector.py)]
+    A[Transaction Generator (generator.py)] --> B((TRANSACTIONS_TOPIC))
+    B --> C[Fraud Detector (detector.py)]
     C -->|amount >= 1000| D[FRAUD-TOPIC]
     C -->|amount < 1000| E[LEGIT-TOPIC]
 ```
