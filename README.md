@@ -45,6 +45,22 @@ faker==24.9.0
 ```bash
 pip install -r requirements.txt
 ```
+Start kafka server
+
+```bash
+./bin/kafka-server-start.sh ./config/kraft/server.properties
+```
+Create topics- FRAUD-TOPIC, LEGIT-TOPIC AND TRANSACTIONS_TOPIC
+```bash
+./bin/kafka-topics.sh --create --topic FRAUD-TOPIC --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1
+```
+```bash
+./bin/kafka-topics.sh --create --topic LEGIT-TOPIC --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1
+```
+```bash
+./bin/kafka-topics.sh --create --topic TRANSACTIONS_-TOPIC --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1
+```
+
 Run the genrator.py
 
 ```bash
