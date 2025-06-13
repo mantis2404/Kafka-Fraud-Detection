@@ -33,7 +33,12 @@ A transaction is flagged as **fraudulent** if:
 ###  Flowchart
 ![Kafka Fraud Detection Workflow](kafka_fraud_workflow.png)
 
-```mermaid flowchart LR A[Transaction Generator - generator.py] --> B[TRANSACTIONS_TOPIC] B --> C[Fraud Detector - detector.py] C -->|amount >= 1000| D[FRAUD_TOPIC] C -->|amount < 1000| E[LEGIT_TOPIC] ``` 
+```mermaid
+flowchart LR A[Transaction Generator - generator.py] --> B[TRANSACTIONS_TOPIC]
+B --> C[Fraud Detector - detector.py]
+C -->|amount >= 1000| D[FRAUD_TOPIC]
+C -->|amount < 1000| E[LEGIT_TOPIC]
+```
 
 ---
 
